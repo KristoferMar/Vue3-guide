@@ -84,3 +84,20 @@ There are two more additional watchers comming in vue 3. These have not been imp
 - onRenderTracked - called when a reactive dependency is first being accessed in the render function, during render. This dependency will now be tracked. This is helpful to see which dependencies are being tracked, for debugging.
 
 - onRenderTriggered - Called when a new render is triggered, allowing you to inspect what dependency triggered a component to re-render.
+
+## Watch
+
+With base implemented API code, the code is only called once when setup is run. We need it to run every time the search input changes and this is where we use watch to keep track of data that changes. I use watch as an annonymous function on a value. 
+
+It means that a watch function is run on next tick whil reactivly tracking its dependencies, and re-run it when its dependencies change. 
+
+- We can be specific about what riggers the watcher to run.
+- We can get access to the new value and old value of the item being watched. 
+- We can specifically watch two rective references at once.
+- We can also watch reactive references with access to new and old values.
+
+## Sharing State
+
+Sharing state with the composition API means that we create a promis in a file which sends in the function to call with async/await. 
+
+We can then import the promis file which holds state data in form of constants. In the component we will then call the promise with updated searchinput data. 
