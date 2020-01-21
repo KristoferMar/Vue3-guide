@@ -54,7 +54,7 @@ https://www.vuemastery.com/courses/vue-3-essentials/modularizing
 
 ## Lifecycle Hooks 
 
-We are all probably familiar with Vue lifecycle hooks, and if not they are listed below. 
+We are all probably familiar with Vue lifecycle hooks, but they have been changed to the following:
 
 - beforeCreate - Called immediatly after instance is initialized, before options are processed. 
 - created - Called after the instace has been created. 
@@ -62,7 +62,7 @@ We are all probably familiar with Vue lifecycle hooks, and if not they are liste
 - mounted - Called when the instance has been mounted (browser updated). 
 - beforeUpdate - Called when reactive data has changed, before the DOM is re-rendered. 
 - updated - Called when reactive data has changed, and the DOM has been re-rendered. 
-- beforeDestroy - Called right before the Vue instance is destroyed. 
+- beforeDestroy -> onBeforeUnmount - Called right before the Vue instance is destroyed. 
 - destroyed - Called after the Vue instance has been destroyed. 
 
 There are newer Vue2 lifeCycle: 
