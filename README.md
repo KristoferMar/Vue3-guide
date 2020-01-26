@@ -2,6 +2,10 @@
 
 ## Composition API
 
+### Instalation 
+
+<i>yarn add @vue/composition-api </i>
+
 - Vue2 is very spilt up in the proejct
 
 - Using the composition API we can make our components much more readable.

@@ -1,29 +1,29 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
+    <Header></Header>
+    <mainview></mainview>
     <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>
   </div>
 </template>
 
 <script lang="ts">
+import { createComponent, ref } from '@vue/composition-api';
 import { Component, Vue } from 'vue-property-decorator';
 import HelloWorld from './components/HelloWorld.vue';
+import Mainview from './views/mainview/Mainview.vue';
+import Header from './components/Header.vue';
 
-@Component({
+export default createComponent({
+  setup() {
+  },
   components: {
     HelloWorld,
+    Mainview,
+    Header,
   },
-})
-export default class App extends Vue {}
+});
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+
 </style>
